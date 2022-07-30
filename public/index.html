@@ -5,13 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href = "https://pyscript.net/alpha/pyscript.css" >
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <style>.center {
+      border: 5px solid #ffffff;
+      display: flex;
+      justify-content: center;
+      }</style>
+    <py-env>
+      - numpy
+      - paths:
+         - /myTorchNN.py
+    </py-env>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+   
     <div id="app"></div>
+    
+    <script>
+
+    </script>
+
+
+  <div class="center"></div>
+  <py-script class="center">
+<!--from myTorchNN import printing
+printing()-->
+  </py-script>
     <!-- built files will be auto injected -->
   </body>
+
 </html>
+
+
